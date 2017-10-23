@@ -1,0 +1,61 @@
+html {
+	min-height: 100%;  
+	background-color: $orange_dark;
+	background: linear-gradient($orange_dark, $orange_light);
+
+  @include mobile {
+    background: white; 
+  } 
+}
+
+body {
+  font-size: 16px;
+
+  @include tablet {
+    font-size: 18px;
+  }
+
+  @include mobile {
+    font-size: 20px;
+  }
+}
+
+body { 
+  max-width: 680px;
+  height: 420px;
+  margin: 40px auto; 
+  padding: 10px 30px;
+  box-shadow: 1px 1px 6px 1px $color_shadow;
+  background-color: $white; 
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; 
+  color: $color_text;
+
+  @include mobile {
+    max-width: 100%;
+    box-shadow: none; 
+    margin: 0; 
+    padding: 10px 20px;
+  }
+}
+
+header {
+  position: relative;
+  min-height: 50px; 
+}
+
+h2, 
+h3 {
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 1.4em;
+  line-height: 1.2;
+}
+h3 {
+  color: $orange_text;
+  font-size: 1.2em;
+  padding-bottom: 0px; 
+}
+

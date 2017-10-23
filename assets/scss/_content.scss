@@ -1,0 +1,100 @@
+/* Content */
+.row {
+  min-height: 100px; 
+  padding-bottom: 30px; 
+  position: relative;
+
+  .col {
+    display: inline-block;
+  } 
+
+  .col:not(:last-child) {
+    margin-right: 55px;
+    
+    @include mobile {
+      margin-right: 12px;
+    }
+  } 
+}
+
+.col_1_3 {
+  color: $orange_text;
+  font-size: 90px;
+  vertical-align: middle; 
+
+  @include mobile {
+    display: block !important;
+    margin: 10px 0; 
+    font-size: 60px;
+    width: 40%;
+    text-align: center;
+    
+    &:last-child {
+      position: absolute;
+      top: -10px;
+      right: 10px;
+      line-height: 2;
+      text-align: left; 
+    }
+  }
+}
+
+.temp_units {
+  position: absolute;
+  right: 5px; 
+  top: 5px; 
+
+  @include mobile {
+    top: -20px; 
+  }
+}
+
+.temp_allday {
+  font-size: 16px; 
+
+  .item {
+    padding: 3px 0; 
+    white-space: nowrap;
+  }
+
+  .day_time {
+    display: inline-block;
+    min-width: 80px;
+  }
+}
+
+.col_1_7 {
+  font-size: 11px; 
+  text-align: center; 
+
+  .weather_icon {
+    font-size: 30px;
+    line-height: 1.8;  
+    margin-top: 4px; 
+  }
+
+  @include mobile {
+    font-size: 16px; 
+  }
+}
+
+.arrow {
+  margin-right: 10px; 
+  cursor: pointer; 
+}
+
+.error {
+  text-align: center;
+  color: red;     
+}
+
+/* Layout classes */
+
+.float_right {
+  float: right;
+}
+
+.hidden {
+  display: none; 
+}
+

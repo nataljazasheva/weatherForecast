@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>7-day weather forecast</title>
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400">
+  <link rel="stylesheet" href="/assets/css/normalize.css" type="text/css"/>
+  <link rel="stylesheet" href="/assets/css/weather-icons.css" type="text/css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css" type="text/css"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script type="text/javascript" src="/assets/js/script.js"></script>
+   
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+ 
+<body id="index" class="home">    
+    
+    <div id="error" class="error"></div>
+    
+    <div class="search_container hidden">
+        <form class="search_form">
+            <input id="city" class="city_input" type="search" placeholder="City" required="required">
+            <button id="get_city_weather" type="submit" class="search_icon material-icons">search</button>
+        </form>
+        <div class="text_smaller">or</div> 
+        use my <a href="#" id="get_local_weather" class="underline_dotted">current position</a>
+    </div>
+  
+    <header>
+      <h1>
+        <i id="choose_city" class="arrow material-icons">keyboard_backspace</i>
+        <span id="location"> </span>
+      </h1>
+      <h2 id="dateNow"> </h2>
+      <div class="temp_units">
+        <label class="switch">
+          <input type="checkbox" id="temp_units">
+          <div class="slider"></div>
+        </label>
+      </div> 
+    </header>
+
+    <article class="container">       
+      <h3 id="today_weather_desc"></h3>
+
+      <div class="row today">
+        <div class="col col_1_3 today_temp" id="today_temp">
+        </div>
+        <div class="col col_1_3 today_icon">
+          <span id="today_icon"></span>
+        </div>    
+        <div class="col col_1_3 temp_allday">
+          <div class="item">
+            <span class="day_time">Morning</span>
+            <span class="temp" id="morning_temp">4°C</span></div>
+          <div class="item">
+            <span class="day_time">Day</span>
+            <span class="temp" id="day_temp">6°C</span>
+          </div>
+          <div class="item">
+            <span class="day_time">Evening</span>
+            <span class="temp" id="evening_temp">3°C</span>
+          </div>
+          <div class="item">
+            <span class="day_time">Night</span>
+            <span class="temp" id="night_temp">-1°C</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row main-carousel">
+        <div class="col col_1_7 carousel-cell" id="day_0">
+            <div class="day"></div>
+            <div class="weather_icon"></div>
+            <div class="temp"></div>
+        </div>
+        <div class="col col_1_7 carousel-cell" id="day_1">
+            <div class="day"></div>
+            <div class="weather_icon"></div>
+            <div class="temp"></div>
+        </div>   
+        <div class="col col_1_7 carousel-cell" id="day_2">
+            <div class="day"></div>
+            <div class="weather_icon"></div>
+            <div class="temp"></div>
+        </div>
+        <div class="col col_1_7 carousel-cell" id="day_3">
+            <div class="day"></div>
+            <div class="weather_icon"></div>
+            <div class="temp"></div>
+        </div>
+        <div class="col col_1_7 carousel-cell" id="day_4">
+            <div class="day"></div>
+            <div class="weather_icon"></div>
+            <div class="temp"></div>
+        </div>
+        <div class="col col_1_7 carousel-cell" id="day_5">
+            <div class="day"></div>
+            <div class="weather_icon"></div>
+            <div class="temp"></div>
+        </div>
+        <div class="col col_1_7 carousel-cell" id="day_6">
+            <div class="day"></div>
+            <div class="weather_icon"></div>
+            <div class="temp"></div>
+        </div>
+      </div>
+
+    </article> <!-- container -->
+ 
+</body> 
+</html> 
